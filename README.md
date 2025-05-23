@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Feliz Dia dos Namorados</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Feliz Dia dos Namorados 💖</h1>
+    <p class="contador">Estamos juntos há <span id="dias"></span> !!</p>
+
+    <div class="galeria">
+      <img src="foto1.jpg" alt="Foto 1 do casal" />
+      <img src="foto2.jpg" alt="Foto 2 do casal" />
+      <img src="foto3.jpg" alt="Foto 3 do casal" />
+    </div>
+
+    <div class="frases">
+      <p>"Você é o meu hoje e todos os meus amanhãs."</p>
+      <p>"Te amo mais a cada dia."</p>
+      <p>"Com você, cada momento é inesquecível."</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
