@@ -1,37 +1,57 @@
 body {
-  font-family: 'Arial', sans-serif;
-  background: linear-gradient(to right, #000000e2, #56070ce2, #56070ce1, #000000e2);
+  font-family: "Playwrite DK Loopet", cursive;
+  background: #A4D5A6;
+  background-attachment: fixed;
   margin: 0;
   padding: 0;
   text-align: center;
-  color: rgb(255, 121, 68);
+  color: #000000;
 }
 
 .container {
+  
   max-width: 800px;
   margin: auto;
   padding: 20px;
 }
 
+.primeiro, .segundo, .terceiro {
+  color: #1C5E21;
+  font-size: 20px;
+}
+
 h1 {
   font-size: 3em;
   margin-top: 20px;
+  color: #22238D;
 }
 
 .contador {
   font-size: 1.5em;
   margin-bottom: 30px;
-  color: #ff8024;
+  color:#000000;
 }
 
-#dias {
+#dias, #dias1, #dias2 {
   display: inline-block;
   transition: all 0.3s ease-in-out;
   font-weight: bold;
-  background-color: rgba(128, 33, 59, 0.948);
-  padding: 5px 10px;
+  background-color: rgba(0, 0, 0, 0.948);
+  padding: 5px 10px;      
+  font-family: 'Work sans';        
   border-radius: 10px;
   font-size: 1.3em;
+  color: #ADD9E6;
+  animation: pulsar 1s infinite ease-in-out;
+}
+
+@keyframes pulsar {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
 }
 
 .galeria img {
@@ -42,14 +62,309 @@ h1 {
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
-.frases p {
-  font-size: 1.2em;
-  margin: 20px 0;
-  font-style: italic;
+.foto-reveal{
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease, transform 1s ease;  
 }
 
-h1 {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 60   px;
-    color: #ff4b4bca;
+.foto-reveal.aparecer{
+  opacity: 1;
+  transform: translateY(0);
 }
+
+.frases {
+  font-family: 'Dancing Script';
+  font-size: 1.2em;
+  text-shadow: 3px 3px 3px #22238D;
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  padding: 5px ;
+  box-shadow: 10px 10px 20px 15px rgba(58, 73, 62, 0.767);
+  margin: 20px 0;
+  font-style: italic;
+  color: #000000;
+}
+.player {
+  background-color: #f8f0ff;
+  padding: 10px;
+  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+#playPause {
+  background-color: #ff69b4;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+#playPause:hover {
+  background-color: #ff85c1;
+}
+
+
+
+
+
+
+
+/* === PANDA COMPLETO === */
+.panda-cabeca {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  background: #fff;
+  border-radius: 50%;
+  margin: 40px auto;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+/* Orelhas */
+.orelha {
+  width: 50px;
+  height: 50px;
+  background: #000;
+  border-radius: 50%;
+  position: absolute;
+  top: -20px;
+}
+.orelha-esquerda {
+  left: -10px;
+}
+.orelha-direita {
+  right: -10px;
+}
+
+/* Olhos */
+.olho {
+  width: 40px;
+  height: 40px;
+  background: #000;
+  border-radius: 50%;
+  position: absolute;
+  top: 40px;
+  animation: piscar 4s infinite;
+}
+.olho-esquerdo {
+  left: 25px;
+}
+.olho-direito {
+  right: 25px;
+}
+
+/* Brilho dos olhos */
+.brilho {
+  width: 10px;
+  height: 10px;
+  background: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+/* Nariz */
+.nariz {
+  width: 15px;
+  height: 10px;
+  background: #000;
+  border-radius: 50% / 40%;
+  position: absolute;
+  top: 90px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Boca */
+.boca {
+  width: 30px;
+  height: 20px;
+  border-bottom: 3px solid #000;
+  border-radius: 50%;
+  position: absolute;
+  top: 105px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* === PANDA COMPLETO === */
+/*.panda-cabeca {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  background: #fff;
+  border-radius: 50%;
+  margin: 40px auto;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}*/
+
+/* Orelhas */
+/*.orelha {
+  width: 50px;
+  height: 50px;
+  background: #000;
+  border-radius: 50%;
+  position: absolute;
+  top: -20px;
+}
+.orelha-esquerda {
+  left: -10px;
+}
+.orelha-direita {
+  right: -10px;
+}*/
+
+/* Olhos */
+/*.olho {
+  width: 40px;
+  height: 40px;
+  background: #000;
+  border-radius: 50%;
+  position: absolute;
+  top: 40px;
+  animation: piscar 4s infinite;
+}
+.olho-esquerdo {
+  left: 25px;
+}
+.olho-direito {
+  right: 25px;
+}*/
+
+/* Brilho dos olhos */
+/*.brilho {
+  width: 10px;
+  height: 10px;
+  background: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}*/
+
+/* Nariz */
+/*.nariz {
+  width: 15px;
+  height: 10px;
+  background: #000;
+  border-radius: 50% / 40%;
+  position: absolute;
+  top: 90px;
+  left: 50%;
+  transform: translateX(-50%);
+}*/
+
+/* Boca */
+/*.boca {
+  width: 30px;
+  height: 20px;
+  border-bottom: 3px solid #000;
+  border-radius: 50%;
+  position: absolute;
+  top: 105px;
+  left: 50%;
+  transform: translateX(-50%);
+}*/
+
+/*.panda-lateral {
+  position: fixed;
+  top: 20%;
+  z-index: 1;
+}
+
+.panda-lateral.esquerda {
+  top: 40%;
+  left: 10px;
+}
+
+.panda-lateral.direita {
+  top: 40%;
+  right: 10px;
+}*/
+
+/*.panda-lateral .panda-cabeca {
+  transform: scale(0.2); /* Tamanho um pouco menor */
+  /*box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);*/
+/*}*/
+
+/* Animação para piscar */
+@keyframes piscar {
+  0%, 100% {
+    transform: scaleY(1);
+  }
+  48% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(0.1);
+  }
+  52% {
+    transform: scaleY(1);
+  }
+} 
+
+/*olho esquerdo*/
+
+.olho-panda-esq{
+  width: 40px;
+  height: 40px;
+  background: #ffffff;
+  border-radius: 50%;
+  position: absolute;
+  top: 95px;
+  left: 20%;
+  animation: piscar 4s infinite;
+}
+
+/*olho direito*/
+
+.sombra-olho-panda-dir{
+  width: 80px;
+  height: 95px;
+  background: #000000;
+  border-radius: 50%;
+  position:absolute;
+  top: 80px;
+  right: 18%;
+}
+
+.olho-panda-dir{
+  width: 40px;
+  height: 40px;
+  background: #ffffff;
+  border-radius: 50%;
+  position: absolute;
+  top: 95px;
+  right: 20%;
+  animation: piscar 4s infinite;
+}
+
+.sombra-olho-panda-esq{
+  width: 80px;
+  height: 95px;
+  background: #000000;
+  border-radius: 50%;
+  position:absolute;
+  top: 80px;
+  left: 18%;
+}
+.olho-panda-esq{
+  width: 40px;
+  height: 40px;
+  background: #ffffff;
+  border-radius: 50%;
+  position: absolute;
+  top: 95px;
+  left: 20%;
+  animation: piscar 4s infinite;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Playwrite+DK+Loopet:wght@100..400&family=Smooch+Sans:wght@100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
