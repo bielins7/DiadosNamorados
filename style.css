@@ -195,8 +195,8 @@ h1 {
   top: 10px;
 }
 
-.sombra-olho-panda-esq { left: 18%; }
-.sombra-olho-panda-dir { right: 18%; }
+.sombra-olho-panda-esq { left: 15%; }
+.sombra-olho-panda-dir { right: 15%; }
 
 .olho-panda-esq, .olho-panda-dir {
   width: 40px;
@@ -208,8 +208,8 @@ h1 {
   animation: piscar 4s infinite;
 }
 
-.olho-panda-esq { left: 21%; }
-.olho-panda-dir { right: 21%; }
+.olho-panda-esq { left: 18%; }
+.olho-panda-dir { right: 18%; }
 
 @keyframes piscar {
   0%, 100% { transform: scaleY(1); }
