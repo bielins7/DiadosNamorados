@@ -52,8 +52,8 @@ function mostrarFotos() {
   });
 }
 
-// === ANIMAÇÃO DE ELEMENTOS COM CLASSE .iniciar ===
-const iniciarElementos = document.querySelectorAll('.iniciar');
+// === ANIMAÇÃO DE ELEMENTOS COM CLASSE .container ===
+const iniciarElementos = document.querySelectorAll('.container');
 
 function mostrarElementosIniciais() {
   iniciarElementos.forEach(el => {
@@ -61,7 +61,7 @@ function mostrarElementosIniciais() {
     const alturaTela = window.innerHeight;
 
     if (posicao < alturaTela - 100) {
-      el.classList.add('iniciar-aparecer');
+      el.classList.add('container-aparecer');
     }
   });
 }
