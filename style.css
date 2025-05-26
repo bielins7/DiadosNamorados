@@ -2,7 +2,7 @@ body {
   font-family: "Playwrite DK Loopet", cursive;
   background: #A4D5A6;
   background-attachment: fixed;
-
+  margin: 50px;
   padding: 0;
   text-align: center;
   color: #000000;
@@ -10,7 +10,7 @@ body {
 
 .iniciar{
   position: absolute;
-  top: 50px;
+  top: 70px;
   left: 10%;
   
 }
@@ -20,7 +20,7 @@ body {
   text-align: center;
   position: absolute;
   top: 100px;
-  left: 20%;
+  left: 18%;
   max-width: 800px;
   margin: auto;
   padding: 20px;
