@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
@@ -7,21 +8,93 @@
 </head>
 <body>
   <div class="container">
+
+   <div class="player">
+  <button id="playPause">▶️</button>
+  <span id="status">Parado</span>
+</div>
+
+<audio id="musica" loop preload="auto">
+  <source src="Daniel-Caesar-Superpowers-_Official-Audio_.mp3" type="audio/mpeg">
+</audio>
+
     <h1>Feliz Dia dos Namorados 💖</h1>
-    <p class="contador">Estamos juntos há <span id="dias"></span> !!</p>
+    <!-- <p class="contador">Estamos juntos há <span id="dias"></span> !!</p> -->
 
     <div class="galeria">
-      <img src="foto1.jpg" alt="Foto 1" />
-      <img src="foto2.jpg" alt="Foto 2" />
-      <img src="foto3.jpg" alt="Foto 3" />
+      <p class ="foto-reveal"><img src="pfoto.jpg" alt="Foto 1 do casal" />
+      <p class = "contador">Tem <span id = "dias1"></span> que ficamos pela Primeira vez!!</p>
+      <p class = "primeiro">Sempre lembro desse dia! E nmrl msm, Que Sorte estou tendo desde então!!</p></p>
+
+      <p class ="foto-reveal"></p><img src="foto2.jpg" alt="Foto 2 do casal" />
+      <p class="contador">O primeiro "pedido" de namoro (na vdd resolvi que você era só minha) kkkkk. Tem exatamente: <span id="dias"></span> !!</p>
+      <p class="segundo"> Eu amo você!! (não achei foto de dia rs)</p></p>
+
+      <p class ="foto-reveal"></p><img src="foto3.jpg" alt="Foto 3 do casal" />
+      <p class="contador">Tem: <span id="dias2"></span> que te dei a primeira aliança!!</p>
+      <p class = "terceiro">Minha Fiona!!(tbm ñ achei foto desse dia)</p></p>
     </div>
 
+
     <div class="frases">
-      <p>""</p>
-      <p>""</p>
-      <p>""</p>
+      <p>"Você é o meu hoje e todos os meus amanhãs."</p>
+      <p>"Te amo mais a cada dia."</p>
+      <p>"Com você, cada momento é inesquecível."</p>
     </div>
+
   </div>
+<div class="panda-cabeca">
+  <div class="orelha orelha-esquerda"></div>
+  <div class="orelha orelha-direita"></div>
+  <div class="olho olho-esquerdo">
+    <div class="brilho"></div>
+  </div>
+  <div class="olho olho-direito">
+    <div class="brilho"></div>
+  </div>
+  <div class="nariz"></div>
+  <div class="boca"></div>
+</div>
+
+<!-- Panda à esquerda -->
+<!-- <div class="panda-lateral esquerda">
+  <div class="panda-cabeca">
+    <div class="orelha orelha-esquerda"></div>
+    <div class="orelha orelha-direita"></div>
+    <div class="olho olho-esquerdo"><div class="brilho"></div></div>
+    <div class="olho olho-direito"><div class="brilho"></div></div>
+    <div class="nariz"></div>
+    <div class="boca"></div>
+  </div>
+</div> -->
+
+<!-- Panda à direita -->
+<!-- <div class="panda-lateral direita">
+  <div class="panda-cabeca">
+    <div class="orelha orelha-esquerda"></div>
+    <div class="orelha orelha-direita"></div>
+    <div class="olho olho-esquerdo"><div class="brilho"></div></div>
+    <div class="olho olho-direito"><div class="brilho"></div></div>
+    <div class="nariz"></div>
+    <div class="boca"></div>
+  </div>
+</div>  -->
+
+<!-- Olho panda-->
+<div class = "sombra-olho-panda-esq"></div>
+<div class = "olho-panda-esq"></div>
+
+<div class = "sombra-olho-panda-dir"></div>
+<div class = "olho-panda-dir"></div>
+
+<audio autoplay  loop preload="auto" hidden>
+    <source src = "Daniel-Caesar-Superpowers-_Official-Audio_.mp3" type = "audio/mpeg">
+    <source src = "Daniel-Caesar-Superpowers-_Official-Audio_.ogg" type = "audio/ogg">
+    <source src = 
+    "Daniel-Caesar-Superpowers-_Official-Audio_.wav" type = "audio/wav">
+</audio>
+
+
 
   <script src="script.js"></script>
 </body>
