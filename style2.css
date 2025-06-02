@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Playwrite+DK+Loopet:wght@100..400&family=Smooch+Sans:wght@100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Reset básico para garantir responsividade */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: linear-gradient(to bottom, #280000, #420d08, #56070c, #8f3d38, #cb7169);
+  color: white;
+  text-align: center;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 1.2rem;
+  margin: 40px auto;
+  padding: 0 1rem;
+  max-width: 1200px;
+}
+
+/* Títulos */
+h1 {
+  font-size: 3rem;
+  margin: 5px;
+  font-family: "Playwrite DK Loopet", cursive;
+}
+
+h2 {
+  font-size: 2rem;
+  margin: 25px;
+}
+
+/* Player */
+.play {
+  margin: 60px 0;
+}
+
+.player {
+  color: #ffffff;
+  margin: 30px auto;
+  background-image: linear-gradient(to bottom, #280000, #420d08, #56070c, #8f3d38, #cb7169);
+  padding: 10px 20px;
+  border-radius: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 2px 2px 15px 12px #fafafa78;
+  flex-wrap: wrap;
+}
+
+#playPause {
+  background-image: linear-gradient(to top, #420d08, #cb7169);
+  color: #ae3636;
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background 3s;
+}
+
+#playPause:hover {
+  background-color: red;
+}
+
+.panda-cabeca {
+  position: absolute;
+  left: 19%;
+  top: 430px;
+  width: 150px;
+  height: 150px;
+  background: #fff;
+  border-radius: 50%;
+  margin: 40px;
+  margin-left: 385px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.orelha {
+  width: 50px;
+  height: 50px;
+  background: #000;
+  border-radius: 50%;
+  position: absolute;
+  top: -20px;
+}
+
+.orelha-esquerda { left: -10px; }
+.orelha-direita { right: -10px; }
+
+.olho {
+  width: 40px;
+  height: 40px;
+  background: #000;
+  border-radius: 50%;
+  position: absolute;
+  top: 40px;
+  animation: piscar 4s infinite;
+}
+
+.olho-esquerdo { left: 25px; }
+.olho-direito { right: 25px; }
+
+.brilho {
+  width: 10px;
+  height: 10px;
+  background: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.nariz {
+  width: 15px;
+  height: 10px;
+  background: #000;
+  border-radius: 50% / 40%;
+  position: absolute;
+  top: 90px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.boca {
+  width: 30px;
+  height: 20px;
+  border-bottom: 3px solid #000;
+  border-radius: 50%;
+  position: absolute;
+  top: 105px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.sombra-olho-panda-esq, .sombra-olho-panda-dir {
+  width: 80px;
+  height: 95px;
+  background: #000;
+  border-radius: 50%;
+  position: absolute;
+  top: 10px;
+}
+
+.sombra-olho-panda-esq { left: 10%; }
+.sombra-olho-panda-dir { right: 10%; }
+
+
+/* Animações */
+
+.hidden1{
+  opacity: 0;
+  filter: blur(10px);
+  transform: translateX(-100%);
+  transition: all 2s;
+  margin: 270px 0;
+}
+
+.hidden {
+  opacity: 0;
+  filter: blur(10px);
+  transform: translateX(-100%);
+  transition: all 2s;
+  margin: 150px 0;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+  transition: all 2s;
+}
+
+/* Contador */
+#dias1, #dias2, #dias3 {
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 5px 10px;
+  font-family: 'Work Sans';
+  border-radius: 10px;
+  font-size: 1.1em;
+  color: #ADD9E6;
+  animation: pulsar 10s infinite ease-in-out;
+}
+
+/* Imagens */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 5px 5px 9px 5px black;
+  margin: 20px 0;
+}
+
+/* Bloco de frases */
+.bloco {
+  margin: 15px auto;
+  background-color: black;
+  color: white;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Responsividade */
+@media (max-width: 992px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  .player {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    font-size: 1rem;
+    margin-top: 20px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .bloco {
+    width: 100%;
+  }
+
+  #playPause {
+    font-size: 1rem;
+    padding: 8px;
+  }
+}
