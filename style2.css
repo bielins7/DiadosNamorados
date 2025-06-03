@@ -238,4 +238,13 @@ img {
     font-size: 1rem;
     padding: 8px;
   }
+
+  .panda-cabeca {
+    width: 120px;
+    height: 120px;
+  }
+
+  .olho, .sombra-olho-panda-esq, .sombra-olho-panda-dir {
+    transform: scale(0.8);
+  }
 }
