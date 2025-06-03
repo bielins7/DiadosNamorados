@@ -7,6 +7,10 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-image: linear-gradient(to bottom, #280000, #420d08, #56070c, #8f3d38, #cb7169);
   color: white;
@@ -52,9 +56,14 @@ h2 {
   background-image: linear-gradient(to top, #420d08, #cb7169);
   color: #ae3636;
   border: none;
-  padding: 10px;
+  padding: 12px;
+  width: 60px;
+  height: 60px;
+  font-size: 1.5rem;
   border-radius: 50%;
-  font-size: 1.2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
   transition: background 3s;
 }
@@ -63,16 +72,16 @@ h2 {
   background-color: red;
 }
 
+/* Panda */
 .panda-cabeca {
-  position: absolute;
-  left: 19%;
-  top: 430px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
   width: 150px;
   height: 150px;
   background: #fff;
   border-radius: 50%;
-  margin: 40px;
-  margin-left: 385px;
+  margin: 40px 0;
   box-shadow: 0 0 10px rgba(0,0,0,0.3);
 }
 
@@ -145,24 +154,17 @@ h2 {
 .sombra-olho-panda-esq { left: 10%; }
 .sombra-olho-panda-dir { right: 10%; }
 
-
 /* Animações */
-
-.hidden1{
-  opacity: 0;
-  filter: blur(10px);
-  transform: translateX(-100%);
-  transition: all 2s;
-  margin: 270px 0;
-}
-
+.hidden1,
 .hidden {
   opacity: 0;
   filter: blur(10px);
   transform: translateX(-100%);
   transition: all 2s;
-  margin: 150px 0;
 }
+
+.hidden1 { margin: 270px 0; }
+.hidden { margin: 150px 0; }
 
 .show {
   opacity: 1;
@@ -184,11 +186,13 @@ h2 {
 
 /* Imagens */
 img {
-  max-width: 100%;
+  width: 100%;
+  max-width: 700px;
   height: auto;
   border-radius: 10px;
   box-shadow: 5px 5px 9px 5px black;
-  margin: 20px 0;
+  margin: 20px auto;
+  display: block;
 }
 
 /* Bloco de frases */
@@ -197,7 +201,7 @@ img {
   background-color: black;
   color: white;
   border-radius: 20px;
-  width: 100%;
+  width: 90%;
   max-width: 700px;
   height: auto;
   padding: 20px;
@@ -234,11 +238,6 @@ img {
     width: 100%;
   }
 
-  #playPause {
-    font-size: 1rem;
-    padding: 8px;
-  }
-
   .panda-cabeca {
     width: 120px;
     height: 120px;
@@ -246,5 +245,24 @@ img {
 
   .olho, .sombra-olho-panda-esq, .sombra-olho-panda-dir {
     transform: scale(0.8);
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .player {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .hidden, .hidden1 {
+    margin: 100px 0;
+  }
+
+  .frase-final {
+    font-size: 1rem;
   }
 }
